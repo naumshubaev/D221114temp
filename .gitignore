@@ -1,6 +1,12 @@
 HELP.md
 .gradle
 build/
+Thumbs.db*
+.DS_Store*
+node_modules
+.idea
+target
+*.iml
 
 ### STS ###
 .apt_generated
