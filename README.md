@@ -14,8 +14,8 @@ D221204
 1) склонировать данный репозиторий
 2) запуск контейнеров с MySql, PostgreSQL и Node.js использовать команду
 
-``` docker-compose up -d --build ```
-4) запуск приложения:
+   ``` docker-compose up -d --build ```
+3) запуск приложения:
     * для запуска под MySQL:
     ```
     java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa-shop.jar
@@ -24,7 +24,7 @@ D221204
     ```
     java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
     ```
-5) запуск тестов:
+4) запуск тестов:
     * для запуска под MySQL:
    ```
    gradlew -Ddb.url=jdbc:mysql://localhost:3306/app clean test
