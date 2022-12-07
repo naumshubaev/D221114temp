@@ -1,12 +1,8 @@
+Thumbs.db*
+.DS_Store
 HELP.md
 .gradle
 build/
-Thumbs.db*
-.DS_Store*
-node_modules
-.idea
-target
-*.iml
 
 ### STS ###
 .apt_generated
@@ -30,7 +26,6 @@ out/
 /dist/
 /nbdist/
 /.nb-gradle/
-/data/
 
 ### VS Code ###
 .vscode/
@@ -45,8 +40,11 @@ out/
 *.rar
 
 ### Exclusions ###
-!artifacts/aqa-shop.jar
-### ??will it work?? if it doesn't, run the following command in the Terminal: git add -f artifacts/{name}.jar ###
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
+
+.allure/
+data/
+data_mysql/
+data_postgres/
