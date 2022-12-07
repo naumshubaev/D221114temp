@@ -24,7 +24,7 @@ D221204
    ```
    gradlew -Ddb.url=jdbc:mysql://localhost:3306/app clean test   
    ```
-4) остановить приложение и Докер!
+4) остановить приложение и Докер
 5) запуск под PostgreSQL:
 * приложение
    ```
