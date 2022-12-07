@@ -12,24 +12,24 @@ D221204
 ## Запуск контейнеров, приложения и тестов
 0) утановить IntellijIdea и Docker 
 1) склонировать данный репозиторий
-2) запуск контейнеров с MySql, PostgreSQL и Node.js использовать команду
+2) запуск контейнеров с MySql, PostgreSQL и Node.js
 
    ``` docker-compose up -d --build ```
-3) запуск приложения:
-    * для запуска под MySQL:
-    ```
-    java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa-shop.jar
-    ```
-    * для запуска под PostgreSQL:
-    ```
-    java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
-    ```
-4) запуск тестов:
-    * для запуска под MySQL:
+3) запуск под MySQL:
+* приложение
    ```
-   gradlew -Ddb.url=jdbc:mysql://localhost:3306/app clean test
-   
+   java -Dspring.datasource.url=jdbc:mysql://localhost:3306/app -jar artifacts/aqa-shop.jar
    ```
-    * для запуска под PostgreSQL:
+* тесты
+   ```
+   gradlew -Ddb.url=jdbc:mysql://localhost:3306/app clean test   
+   ```
+4) запуск под PostgreSQL:
+* приложение
+   ```
+   java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
+   ```
+  * тесты
    ```
    gradlew -Ddb.url=jdbc:postgresql://localhost:5432/app clean test
+   ```
