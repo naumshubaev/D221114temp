@@ -43,8 +43,6 @@ out/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
-
 .allure/
-data/
 data_mysql/
 data_postgres/
