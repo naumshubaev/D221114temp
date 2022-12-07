@@ -8,28 +8,52 @@ services:
       - '9999:9999'
 
   postgres:
-    image: postgres:12.0-alpine
-    container_name: pstg-container
+    image: postgres:13.3
+    container_name: postgresql
+    volumes:
+      - ./data:/var/lib/postgres
     ports:
       - '5432:5432'
-#    для Windows 10 Pro на Mac не работает:
-#    volumes:
-#      - ./data_postgres:/var/lib/postgresql/data
-
     environment:
-      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DATABASE=app
       - POSTGRES_USER=app
-      - POSTGRES_DB=app
+      - POSTGRES_PASSWORD=pass
 
   mysql:
-    image: mysql:8.0.18
-    container_name: mysql-container
+    image: mysql:latest
+    container_name: mysql
+    volumes:
+      - ./data:/var/lib/mysql
     ports:
       - '3306:3306'
-    volumes:
-      - ./data_mysql:/var/lib/mysql
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=app
       - MYSQL_USER=app
       - MYSQL_PASSWORD=pass
+#  postgres:
+#    image: postgres:12.0-alpine
+#    container_name: pstg-container
+#    ports:
+#      - '5432:5432'
+##    для Windows 10 Pro на Mac не работает:
+##    volumes:
+##      - ./data_postgres:/var/lib/postgresql/data
+#
+#    environment:
+#      - POSTGRES_PASSWORD=pass
+#      - POSTGRES_USER=app
+#      - POSTGRES_DB=app
+#
+#  mysql:
+#    image: mysql:8.0.18
+#    container_name: mysql-container
+#    ports:
+#      - '3306:3306'
+#    volumes:
+#      - ./data_mysql:/var/lib/mysql
+#    environment:
+#      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+#      - MYSQL_DATABASE=app
+#      - MYSQL_USER=app
+#      - MYSQL_PASSWORD=pass
