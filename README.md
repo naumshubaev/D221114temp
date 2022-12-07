@@ -24,7 +24,8 @@ D221204
    ```
    gradlew -Ddb.url=jdbc:mysql://localhost:3306/app clean test   
    ```
-4) запуск под PostgreSQL:
+4) остановить приложение и Докер!
+5) запуск под PostgreSQL:
 * приложение
    ```
    java -Dspring.datasource.url=jdbc:postgresql://localhost:5432/app -jar artifacts/aqa-shop.jar
