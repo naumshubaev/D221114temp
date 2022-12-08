@@ -50,7 +50,7 @@ public class BuyingTripDbTest {
     }
 
     @Test
-    @DisplayName("Should confirm with APPROVED card for credit")
+    @DisplayName("Should confirm with APPROVED card for Credit")
     void shouldConfirmCreditWithValidCard() throws SQLException {
         StartPage startPage = new StartPage();
         CreditPage creditPage = startPage.goToCreditPage();
