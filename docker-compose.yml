@@ -20,7 +20,7 @@ services:
       - POSTGRES_PASSWORD=pass
 
   mysql:
-    image: mysql:latest
+    image: mysql:8.0.30
     container_name: mysql
     volumes:
       - ./data:/var/lib/mysql
