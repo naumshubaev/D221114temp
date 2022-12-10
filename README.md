@@ -2,7 +2,9 @@
 
 ## Документация
 [План автоматизации тестирования](https://github.com/naumshubaev/D221114temp/blob/master/Plan.md)
+
 [Итоги тестирования](https://github.com/naumshubaev/D221114temp/blob/master/Report.md)
+
 [Итоги автоматизации](https://github.com/naumshubaev/D221114temp/blob/master/Summary.md)
 
 ## Запуск контейнеров, приложения и тестов
